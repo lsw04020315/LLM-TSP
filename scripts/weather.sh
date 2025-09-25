@@ -9,7 +9,7 @@ for pred_len in 96 192 336 720
 do
 
 python main.py \
-    --root_path ./datasets/weather/ \
+    --root_path ./dataset/weather/ \
     --data_path weather.csv \
     --model_id weather_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent \
     --data custom \
@@ -19,20 +19,21 @@ python main.py \
     --batch_size 16 \
     --learning_rate 0.0001 \
     --train_epochs 10 \
+    --decay_fac 0.5
     --decay_fac 0.9 \
     --d_model 768 \
     --n_heads 4 \
     --d_ff 768 \
     --dropout 0.3 \
-    --enc_in 7 \
-    --c_out 7 \
+    --enc_in 21 \
+    --c_out 21 \
     --freq 0 \
-    --lradj type3 \
+    --lradj type4 \
     --patch_size 16 \
     --stride 8 \
     --percent $percent \
     --gpt_layer 6 \
-    --itr 3 \
+    --itr 1 \
     --model $model \
     --r 8 \
     --lora_alpha 16 \

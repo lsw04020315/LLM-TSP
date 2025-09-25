@@ -12,8 +12,8 @@ for lr in 0.0001
 do
 
 python main.py \
-    --root_path ./datasets/QBO/ \
-    --data_path QBO-Singapore (48698)(0.50.751)N104E-six points-10-20-30-50-70-100 pressure1.csv \
+    --root_path ./dataset/QBO/ \
+    --data_path QBO.csv \
     --model_id QBO_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent \
     --data custom \
     --seq_len $seq_len \
@@ -35,7 +35,7 @@ python main.py \
     --stride 8 \
     --percent $percent \
     --gpt_layer 6 \
-    --itr 3 \
+    --itr 1 \
     --model $model \
     --tmax 20 \
     --cos 1 \

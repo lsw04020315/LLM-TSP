@@ -1,7 +1,7 @@
 
 export CUDA_VISIBLE_DEVICES=0
 
-seq_len=966
+seq_len=96
 model=TSP
 
 for percent in 100
@@ -12,7 +12,7 @@ for lr in 0.0001
 do
 
 python main.py \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ./dataset/ETT-small/ \
     --data_path ETTh1.csv \
     --model_id ETTh1_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent \
     --data ett_h \
@@ -35,7 +35,7 @@ python main.py \
     --stride 8 \
     --percent $percent \
     --gpt_layer 6 \
-    --itr 3 \
+    --itr 1 \
     --model $model \
     --tmax 20 \
     --cos 1 \

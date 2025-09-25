@@ -9,7 +9,7 @@ for pred_len in 96 192 336 720
 do
 
 python main.py \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ./dataset/ETT-small/ \
     --data_path ETTh2.csv \
     --model_id ETTh2_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent \
     --data ett_h \
