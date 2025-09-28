@@ -8,7 +8,9 @@ pip install -r requirements.txt
 
 Then place the downloaded data in the folder./dataset. Here is a summary of supported datasets.
 
-3.Train and evaluate model. We provide the experiment scripts for all benchmarks under the folder ./scripts/. 
+3.Download the GPT-2 Large Language Model,https://huggingface.co/openai-community/gpt2
+
+4.Train and evaluate model. We provide the experiment scripts for all benchmarks under the folder ./scripts/. 
 
 You can reproduce the experiment results as the following examples:
 
